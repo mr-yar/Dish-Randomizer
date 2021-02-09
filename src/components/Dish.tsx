@@ -9,6 +9,7 @@ export function Dish(): JSX.Element {
   const meals = useSelector(
     (state: RootState) => state.buttonReducer.meals
   );
+
   if (meals === null) {
     return <h1>Click button to get first recipe... </h1>;
   }
@@ -28,7 +29,7 @@ export function Dish(): JSX.Element {
     ingredientMeasure: string;
   }[] = [];
 
-  for (let i = 1; i <= 20; i = +1) {
+  for (let i = 1; i <= 20; i++) {
     const ingredientName = dish[`strIngredient${i}`];
     const ingredientMeasure = dish[`strMeasure${i}`];
 

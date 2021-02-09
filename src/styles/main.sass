@@ -33,20 +33,6 @@ body
     cursor: pointer
     background: lighten($accent-color, 10%)
 .dish
-  .brief
-    @include flexC
-    padding-top: 3rem
-    &-elem
-      @include flexC
-      padding: 1rem 2rem
-      &__img
-        width: 4rem
-        height: 4rem
-      &__text
-        font-size: 1.4rem
-        font-weight: 600
-        text-align: center
-        margin-left: 1rem
   &-main
     @include flexSA
     padding-top: 5rem
@@ -75,7 +61,20 @@ body
     &-wrapper
       @include flexC
       flex-basis: 40%
-
+.brief
+  @include flexC
+  padding-top: 3rem
+  &-elem
+    @include flexC
+    padding: 1rem 2rem
+    &__img
+      width: 4rem
+      height: 4rem
+    &__text
+      font-size: 1.4rem
+      font-weight: 600
+      text-align: center
+      margin-left: 1rem
 .recipe__ingredient
   font-size: 2.1rem
   font-weight: 400
@@ -104,3 +103,38 @@ body
     background: $accent-color
   &:hover:after
     background: lighten($accent-color, 10%)
+
+
+@media screen and (max-width: 1400px)
+  .container
+    width: 90%
+@media screen and (max-width: 1200px)
+  html
+    font-size: 60%
+@media screen and (max-width: 992px)
+  html
+    font-size: 55%
+  .container
+    width: 95%
+  .dish-main
+    @include flexSB
+@media screen and (max-width: 768px)
+  html
+    font-size: 65%
+  .dish-main
+    display: block
+  .dish-recipe__name
+    padding-top: 4rem
+    margin-bottom: 1rem
+@media screen and (max-width: 576px)
+  html
+    font-size: 75%
+  .dish-recipe__descr
+    text-align: center
+  .brief
+    display: block
+    &-elem
+      &__text
+        font-size: 2.4rem
+        margin-left: 2rem
+

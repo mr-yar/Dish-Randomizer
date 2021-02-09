@@ -1,4 +1,5 @@
 import {compose, createStore} from 'redux';
+import {rootReducer} from '../reducers/rootReducer';
 
 declare global {
   interface Window {
@@ -13,7 +14,7 @@ const persistedState = localStorage.getItem('reduxState')
   : {};
 
 export const store = createStore(
-/// / reducers
+  rootReducer,
   persistedState,
   composeEnhancers()
 );

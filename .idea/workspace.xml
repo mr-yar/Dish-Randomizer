@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cfdaa071-401b-4356-b256-cff4290b45bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="cfdaa071-401b-4356-b256-cff4290b45bf" name="Default Changelist" comment="Main functional, layout">
+      <change afterPath="$PROJECT_DIR$/src/components/Dish.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/area-b.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/area.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/category-b.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/category.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/ingredient-b.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/ingredient.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/buttonReducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/rootReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/actions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store/store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_mixins.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_mixins.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_variable.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variable.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/fonts.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/fonts.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +55,12 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettier.import.notification.dismissed" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\NIKITA\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="C:\Users\NIKITA\Documents\WORK\dish-randomizer-react-redux\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\NIKITA\Documents\WORK\dish-randomizer-react-redux\src\img" />
       <recent name="C:\Users\NIKITA\Documents\WORK\dish-randomizer-react-redux" />
     </key>
   </component>
@@ -88,7 +110,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612858772405</updated>
-      <workItem from="1612858773774" duration="1995000" />
+      <workItem from="1612858773774" duration="3821000" />
+      <workItem from="1612866866150" duration="13958000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1612863256135</created>
@@ -97,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612863256135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initialize project">
+      <created>1612863395429</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612863395429</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,40 +136,53 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initialize project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize project" />
+    <MESSAGE value="Main functional, layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main functional, layout" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="677" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612874144156">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="677" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612874144156" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612862637235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612862637235" />
-    <state x="515" y="109" key="CommitChangelistDialog2" timestamp="1612863255241">
+    <state x="515" y="109" key="CommitChangelistDialog2" timestamp="1612881537560">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="515" y="109" key="CommitChangelistDialog2/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612863255241" />
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1612863201557">
+    <state x="515" y="109" key="CommitChangelistDialog2/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612881537560" />
+    <state width="1899" height="411" key="GridCell.Tab.0.bottom" timestamp="1612881537579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612863201557" />
-    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1612863201557">
+    <state width="1899" height="411" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612881537579" />
+    <state width="1899" height="411" key="GridCell.Tab.0.center" timestamp="1612881537578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612863201557" />
-    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1612863201556">
+    <state width="1899" height="411" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612881537578" />
+    <state width="1899" height="411" key="GridCell.Tab.0.left" timestamp="1612881537578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612863201556" />
-    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1612863201557">
+    <state width="1899" height="411" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612881537578" />
+    <state width="1899" height="411" key="GridCell.Tab.0.right" timestamp="1612881537578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612863201557" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1612863259153">
+    <state width="1899" height="411" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612881537578" />
+    <state x="453" y="161" key="SettingsEditor" timestamp="1612880934471">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612863259153" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1612863201293">
+    <state x="453" y="161" key="SettingsEditor/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612880934471" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1612880327599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612863201293" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612880327599" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1612881402613">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612881402613" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612874150238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1680.-648.1680.1010@0.0.1920.1040" timestamp="1612874150238" />
   </component>
 </project>

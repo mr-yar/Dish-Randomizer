@@ -1,20 +1,21 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {RootState} from '../redux/reducers/rootReducer';
+
 import categoryImg from '../img/category.svg';
 import ingredientImg from '../img/ingredient.svg';
 import areaImg from '../img/area.svg';
 
 export function Dish(): JSX.Element {
-  const meals = useSelector(
-    (state: RootState) => state.buttonReducer.meals
+  const buttonState = useSelector(
+    (state: RootState) => state.buttonReducer
   );
 
-  if (meals === null) {
+  const dish: {[index: string]: any} = buttonState.meal;
+
+  if (dish.idMeal === '') {
     return <h1>Click button to get first recipe... </h1>;
   }
-
-  const dish = meals.meals[0];
 
   const name = dish.strMeal;
   const dishImg = dish.strMealThumb;
@@ -26,15 +27,31 @@ export function Dish(): JSX.Element {
   const ingredients: {
     id: number;
     ingredientName: string;
-    ingredientMeasure: string;
+    ingredientMeasure?: string;
   }[] = [];
 
   for (let i = 1; i <= 20; i++) {
     const ingredientName = dish[`strIngredient${i}`];
     const ingredientMeasure = dish[`strMeasure${i}`];
 
-    if (ingredientName && ingredientMeasure) {
-      ingredients.push({id: i, ingredientName, ingredientMeasure});
+    const isIngredient = ingredientName !== null && ingredientName.trim() !== '';
+    const isMeasure = ingredientMeasure !== null && ingredientMeasure.trim() !== '';
+
+    if (isIngredient) {
+      if (!isMeasure) {
+        ingredients.push({
+          id: i,
+          ingredientName
+        });
+      }
+
+      if (isMeasure) {
+        ingredients.push({
+          id: i,
+          ingredientName,
+          ingredientMeasure
+        });
+      }
     }
   }
 
@@ -42,16 +59,27 @@ export function Dish(): JSX.Element {
     const recipe: JSX.Element[] = [];
 
     ingredients.forEach((item) => {
-      recipe.push(
-        <div className="recipe__ingredient" key={item.id}>
-          {item.ingredientName}
-          {' '}
-          ‒
-          {' '}
-          <span>{item.ingredientMeasure}</span>
-        </div>
-      );
+      if (item.ingredientMeasure) {
+        recipe.push(
+          <div className="recipe__ingredient" key={item.id}>
+            {item.ingredientName}
+            {' '}
+            ‒
+            {' '}
+            <span>{item.ingredientMeasure}</span>
+          </div>
+        );
+      }
+
+      if (!item.ingredientMeasure) {
+        recipe.push(
+          <div className="recipe__ingredient" key={item.id}>
+            {item.ingredientName}
+          </div>
+        );
+      }
     });
+
     return recipe;
   }
 

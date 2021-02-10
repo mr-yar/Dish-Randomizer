@@ -12,7 +12,7 @@ function App(): JSX.Element {
   function buttonHandler() {
     return fetch('https://www.themealdb.com/api/json/v1/1/random.php')
       .then((response) => response.json())
-      .then((result) => dispatch(buttonLoad(result)));
+      .then((result) => dispatch(buttonLoad(result.meals[0])));
   }
 
   return (
@@ -26,6 +26,7 @@ function App(): JSX.Element {
         >
           Get recipe
         </button>
+
         <Dish />
       </div>
     </div>

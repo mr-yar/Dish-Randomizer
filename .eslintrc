@@ -103,6 +103,7 @@
     "comma-spacing": "warn",
     "computed-property-spacing": "warn",
     "func-call-spacing": "warn",
+    "linebreak-style": ["warn", "unix"],
     "key-spacing": "warn",
     "no-trailing-spaces": "warn",
     "@typescript-eslint/indent": ["warn", 2],

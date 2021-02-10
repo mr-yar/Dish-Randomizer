@@ -3,7 +3,7 @@ const initialState = {meals: null};
 export function buttonReducer(
   state = initialState,
   action: {type: string; payload: Meal}
-): {meals: Meal} | {meals: null} {
+): any {
   if (action.type === 'BUTTON_LOAD') {
     return {
       ...state,

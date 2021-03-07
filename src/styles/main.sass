@@ -1,0 +1,141 @@
+@import "fonts"
+@import "variable"
+@import "mixins"
+@import "normalize"
+
+html
+  font-size: 62.5%
+  color: white
+  font-family: "Work Sans", sans-serif
+body
+  background: linear-gradient(270deg, #000000, #2a2a2a)
+
+.container
+  width: 80%
+  margin: auto
+  text-align: center
+.title
+  font-size: 4.8rem
+  font-weight: 600
+  text-transform: uppercase
+  font-family: Bitter, serif
+.btn
+  background: $accent-color
+  outline: none
+  border: none
+  border-radius: .8rem
+  color: #ffffff
+  font-size: 1.8rem
+  font-weight: 600
+  text-align: center
+  padding: 1.2rem 5rem
+  &:hover
+    cursor: pointer
+    background: lighten($accent-color, 10%)
+.dish
+  &-main
+    @include flexSA
+    padding-top: 5rem
+  &-recipe
+    @include flexSB
+    flex-direction: column
+    flex-basis: 45%
+    &__name
+      text-align: left
+      font-size: 2.8rem
+      font-weight: 700
+      margin: 0 0 2rem
+
+    &__ingredients
+      text-align: left
+      margin-bottom: 2rem
+    &__descr
+      color: #aeaeae
+      font-family: Bitter, serif
+      font-size: 1.6rem
+      font-weight: 500
+      text-align: right
+  &-img
+    position: relative
+    width: 100%
+    &-wrapper
+      @include flexC
+      flex-basis: 40%
+.brief
+  @include flexC
+  padding-top: 3rem
+  &-elem
+    @include flexC
+    padding: 1rem 2rem
+    &__img
+      width: 4rem
+      height: 4rem
+    &__text
+      font-size: 1.4rem
+      font-weight: 600
+      text-align: center
+      margin-left: 1rem
+.recipe__ingredient
+  font-size: 2.1rem
+  font-weight: 400
+  padding: .3rem
+  span
+    color: $accent-color
+.link
+  position: relative
+  display: inline-block
+  color: #ffffff
+  margin-top: 5rem
+  margin-bottom: 5rem
+  padding: .5rem
+  font-size: 2rem
+  font-weight: 400
+  text-decoration: none
+  &:hover
+    color: rgb(194, 194, 194)
+  &::after
+    position: absolute
+    content: ''
+    bottom: 0
+    left: 0
+    width: 100%
+    height: .2rem
+    background: $accent-color
+  &:hover:after
+    background: lighten($accent-color, 10%)
+
+
+@media screen and (max-width: 1400px)
+  .container
+    width: 90%
+@media screen and (max-width: 1200px)
+  html
+    font-size: 60%
+@media screen and (max-width: 992px)
+  html
+    font-size: 55%
+  .container
+    width: 95%
+  .dish-main
+    @include flexSB
+@media screen and (max-width: 768px)
+  html
+    font-size: 65%
+  .dish-main
+    display: block
+  .dish-recipe__name
+    padding-top: 4rem
+    margin-bottom: 1rem
+@media screen and (max-width: 576px)
+  html
+    font-size: 75%
+  .dish-recipe__descr
+    text-align: center
+  .brief
+    display: block
+    &-elem
+      &__text
+        font-size: 1.3rem
+        margin-left: 2rem
+  .dish-main
+    padding-top: 3rem

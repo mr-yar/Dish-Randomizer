@@ -1,7 +1,3 @@
-export interface State {
-  meal: Meal;
-}
-
 export interface Meal {
   idMeal: string;
   strMeal: string;

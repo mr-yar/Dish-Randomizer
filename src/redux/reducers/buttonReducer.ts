@@ -1,4 +1,8 @@
-import {Meal, State} from '../../components/types';
+import {Meal} from '../../common/types';
+
+type TState = {
+  meal: Meal;
+};
 
 const initialState: {meal: Meal} = {
   meal: {
@@ -60,7 +64,7 @@ const initialState: {meal: Meal} = {
 export function buttonReducer(
   state = initialState,
   action: {type: string; payload: Meal}
-): State {
+): TState {
   if (action.type === 'BUTTON_LOAD') {
     return {meal: action.payload};
   }

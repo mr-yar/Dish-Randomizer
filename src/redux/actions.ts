@@ -1,4 +1,4 @@
-import {Meal} from '../components/types';
+import {Meal} from '../common/types';
 
 export function buttonLoad(
   value: Meal
